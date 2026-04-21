@@ -21,7 +21,7 @@
     "recharts": "^3.8.1",
     "tailwindcss": "^4.2.4",
     "viem": "^2.48.2",
-    "wagmi": "^3.6.3"
+    "wagmi": "^2.19.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
