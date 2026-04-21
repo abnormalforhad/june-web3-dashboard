@@ -1,4 +1,8 @@
-const API_KEY = import.meta.env.VITE_ALCHEMY_API_KEY;
+// Fallback to Alchemy's public 'demo' key if the user hasn't configured their own yet.
+// Note: The 'demo' key is heavily rate-limited and should only be used for testing.
+const rawKey = import.meta.env.VITE_ALCHEMY_API_KEY;
+const API_KEY = (!rawKey || rawKey === 'your_key') ? 'demo' : rawKey;
+
 const BASE_URL = `https://eth-mainnet.g.alchemy.com/v2/${API_KEY}`;
 const NFT_BASE = `https://eth-mainnet.g.alchemy.com/nft/v3/${API_KEY}`;
 
